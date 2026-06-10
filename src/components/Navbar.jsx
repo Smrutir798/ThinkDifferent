@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav className={`nav ${isScrolled ? 'nav--scrolled' : ''}`} id="mainNav">
       <div className="nav__inner">
         <Link to="/" className="nav__logo" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.5rem', letterSpacing: '-0.02em', textDecoration: 'none' }}>
-          ThinkDiffrent<span className="nav__logo-dot"></span>
+          ThinkDifferent<span className="nav__logo-dot"></span>
         </Link>
 
         <ul className={`nav__links ${isMobileMenuOpen ? 'active' : ''}`}>

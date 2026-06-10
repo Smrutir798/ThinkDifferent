@@ -10,7 +10,7 @@ const Hero = () => {
         </div>
 
         <h1 className="hero__headline reveal reveal-delay-1" style={{ color: 'var(--color-primary)', textShadow: '0 4px 24px rgba(255,255,255,0.4)', maxWidth: '900px' }}>
-          Built by ThinkDiffrent.<br />Designed for the <em className="text-gradient">Future</em>.
+          Built by ThinkDifferent.<br />Designed for the <em className="text-gradient">Future</em>.
         </h1>
 
         <p className="hero__description reveal reveal-delay-2" style={{ color: '#333', fontWeight: 500, textShadow: '0 2px 12px rgba(255,255,255,0.6)' }}>

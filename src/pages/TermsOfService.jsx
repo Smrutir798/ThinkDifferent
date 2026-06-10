@@ -18,12 +18,12 @@ const TermsOfService = () => {
         <div className="content" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)', color: 'var(--color-secondary)', lineHeight: 1.7 }}>
           <section>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginBottom: 'var(--space-xs)', fontFamily: 'var(--font-heading-alt)' }}>1. Acceptance of Terms</h2>
-            <p>By accessing or using the ThinkDiffrent landing page and joining our waitlist, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website.</p>
+            <p>By accessing or using the ThinkDifferent landing page and joining our waitlist, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website.</p>
           </section>
           
           <section>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginBottom: 'var(--space-xs)', fontFamily: 'var(--font-heading-alt)' }}>2. Description of Service</h2>
-            <p>ThinkDiffrent provides an informational landing page and a waitlist form to collect interest for an upcoming SaaS platform. We reserve the right to modify or discontinue any part of this service at any time without notice.</p>
+            <p>ThinkDifferent provides an informational landing page and a waitlist form to collect interest for an upcoming SaaS platform. We reserve the right to modify or discontinue any part of this service at any time without notice.</p>
           </section>
 
           <section>
@@ -33,12 +33,12 @@ const TermsOfService = () => {
 
           <section>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginBottom: 'var(--space-xs)', fontFamily: 'var(--font-heading-alt)' }}>4. Intellectual Property</h2>
-            <p>All content on this website, including text, graphics, logos, and software, is the property of ThinkDiffrent or its content suppliers and is protected by intellectual property laws.</p>
+            <p>All content on this website, including text, graphics, logos, and software, is the property of ThinkDifferent or its content suppliers and is protected by intellectual property laws.</p>
           </section>
 
           <section>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginBottom: 'var(--space-xs)', fontFamily: 'var(--font-heading-alt)' }}>5. Limitation of Liability</h2>
-            <p>ThinkDiffrent shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.</p>
+            <p>ThinkDifferent shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.</p>
           </section>
         </div>
       </div>

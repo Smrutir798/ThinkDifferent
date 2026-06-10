@@ -13,7 +13,7 @@ const PageLoader = () => {
   return (
     <div className={`page-loader ${!isVisible ? 'hidden' : ''}`} id="pageLoader">
       <div className="page-loader__logo">
-        ThinkDiffrent
+        ThinkDifferent
         <span className="nav__logo-dot" style={{ display: 'inline-block', marginLeft: '4px' }}></span>
       </div>
     </div>
