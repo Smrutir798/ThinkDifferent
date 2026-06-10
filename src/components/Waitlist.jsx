@@ -4,6 +4,7 @@ const Waitlist = () => {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
   const [pulse, setPulse] = useState(false);
   const [email, setEmail] = useState('');
+  const [honeypot, setHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -48,6 +49,13 @@ const Waitlist = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email) return;
+
+    // Honeypot check: If this visually hidden field is filled, it's a bot.
+    if (honeypot) {
+      console.warn('Spam bot detected by honeypot.');
+      setIsSuccess(true); // Silently "succeed" for the bot
+      return;
+    }
     
     setIsSubmitting(true);
     
@@ -123,6 +131,16 @@ const Waitlist = () => {
           <div className="cta__actions" style={{ justifyContent: 'center', width: '100%', maxWidth: '480px', margin: '0 auto' }}>
             <form className={`waitlist-form ${isSuccess ? 'success' : ''}`} onSubmit={handleSubmit} style={{ width: '100%' }}>
               <div className="waitlist-form__group">
+                {/* Honeypot field - visually hidden to catch bots */}
+                <input 
+                  type="text" 
+                  name="website" 
+                  style={{ display: 'none' }} 
+                  tabIndex="-1" 
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
                 <input 
                   type="email" 
                   placeholder="Enter your best email address..." 
