@@ -122,7 +122,7 @@ const Waitlist = () => {
           
           <div className="cta__actions" style={{ justifyContent: 'center', width: '100%', maxWidth: '480px', margin: '0 auto' }}>
             <form className={`waitlist-form ${isSuccess ? 'success' : ''}`} onSubmit={handleSubmit} style={{ width: '100%' }}>
-              <div className="waitlist-form__group" style={{ background: '#fff', borderColor: 'rgba(0,0,0,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderRadius: 'var(--radius-full)', padding: '8px' }}>
+              <div className="waitlist-form__group">
                 <input 
                   type="email" 
                   placeholder="Enter your best email address..." 

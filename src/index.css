@@ -1048,11 +1048,11 @@ button {
   display: flex;
   width: 100%;
   gap: var(--space-xs);
-  background: var(--color-glass-strong);
-  border: 1px solid var(--color-border);
-  padding: 6px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: border-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
 }
 
@@ -2007,7 +2007,8 @@ button {
   .waitlist-form__group {
     flex-direction: column;
     align-items: stretch;
-    padding: var(--space-xs);
+    padding: var(--space-sm);
+    border-radius: var(--radius-lg);
   }
 
   .waitlist-form__input {
