@@ -1,0 +1,63 @@
+import React, { useState, useEffect } from 'react';
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMenu = () => setIsMobileMenuOpen(false);
+
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const navHeight = 80; // Approximate nav height
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      closeMenu();
+    }
+  };
+
+  return (
+    <nav className={`nav ${isScrolled ? 'nav--scrolled' : ''}`} id="mainNav">
+      <div className="nav__inner">
+        <a href="#" className="nav__logo" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.5rem', letterSpacing: '-0.02em' }}>
+          ThinkDiffrent<span className="nav__logo-dot"></span>
+        </a>
+
+        <ul className={`nav__links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <li><a href="#story" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#story')}>Our Story</a></li>
+          <li><a href="#timeline" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#timeline')}>Timeline</a></li>
+        </ul>
+
+        <a href="#waitlist" className="nav__cta" style={{ borderRadius: 'var(--radius-full)', fontWeight: 500 }} onClick={(e) => handleSmoothScroll(e, '#waitlist')}>
+          Join Waitlist
+        </a>
+
+        <button 
+          className={`nav__toggle ${isMobileMenuOpen ? 'active' : ''}`} 
+          aria-label="Toggle navigation menu"
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
