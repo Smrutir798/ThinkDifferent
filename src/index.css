@@ -1924,6 +1924,15 @@ button {
     --space-3xl: 5rem;
   }
 
+  .cta {
+    padding: var(--space-3xl) 0;
+  }
+
+  .cta__card {
+    padding: var(--space-2xl) var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
   .nav__links {
     display: none;
   }
@@ -1983,6 +1992,41 @@ button {
     gap: var(--space-sm);
     text-align: center;
   }
+
+  .countdown-timer {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .countdown-item {
+    flex: 1 1 calc(50% - var(--space-sm));
+    min-width: 0;
+    max-width: 160px;
+  }
+
+  .waitlist-form__group {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-xs);
+  }
+
+  .waitlist-form__input {
+    width: 100%;
+    text-align: center;
+  }
+
+  .waitlist-form__btn {
+    width: 100%;
+  }
+
+  .signatures {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .social-icons {
+    gap: var(--space-sm);
+  }
 }
 
 @media (max-width: 480px) {
@@ -2008,6 +2052,31 @@ button {
   .cta__actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .cta__card {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .countdown-timer {
+    gap: var(--space-xs);
+  }
+
+  .countdown-item {
+    padding: var(--space-sm);
+    max-width: none;
+  }
+
+  .countdown-value {
+    font-size: 2rem;
+  }
+
+  .signatures {
+    margin-top: var(--space-3xl);
+  }
+
+  .social-icons {
+    margin-top: var(--space-2xl);
   }
 }
 
