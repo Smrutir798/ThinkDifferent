@@ -14,8 +14,15 @@ const Waitlist = () => {
       setIsSuccess(true);
     }
 
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 14);
+    let launchDateStr = localStorage.getItem('twobrothers_launch_date');
+    let launchDate;
+    if (launchDateStr) {
+      launchDate = new Date(launchDateStr);
+    } else {
+      launchDate = new Date();
+      launchDate.setDate(launchDate.getDate() + 14);
+      localStorage.setItem('twobrothers_launch_date', launchDate.toISOString());
+    }
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
