@@ -47,12 +47,14 @@ const Navbar = () => {
         </Link>
 
         <ul className={`nav__links ${isMobileMenuOpen ? 'active' : ''}`}>
-          <li><a href="#story" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#story')}>Our Story</a></li>
-          <li><a href="#timeline" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#timeline')}>Timeline</a></li>
+          <li><a href="#about" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#about')}>Who We Are</a></li>
+          <li><a href="#story" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#story')}>Why We Started</a></li>
+          <li><a href="#services" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#services')}>Services</a></li>
+          <li><a href="#products" className="nav__link" onClick={(e) => handleSmoothScroll(e, '#products')}>Products</a></li>
         </ul>
 
-        <a href="#waitlist" className="nav__cta" style={{ borderRadius: 'var(--radius-full)', fontWeight: 500 }} onClick={(e) => handleSmoothScroll(e, '#waitlist')}>
-          Join Waitlist
+        <a href="#contact" className="nav__cta" style={{ borderRadius: 'var(--radius-full)', fontWeight: 500 }} onClick={(e) => handleSmoothScroll(e, '#contact')}>
+          Contact Us
         </a>
 
         <button 

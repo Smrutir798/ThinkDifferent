@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
+import About from '../components/About';
 import Story from '../components/Story';
-import Timeline from '../components/Timeline';
-import Waitlist from '../components/Waitlist';
+import Services from '../components/Services';
+import Products from '../components/Products';
+import MissionVision from '../components/MissionVision';
+import ContactCTA from '../components/ContactCTA';
 
 const Home = () => {
   useEffect(() => {
@@ -25,8 +28,8 @@ const Home = () => {
     // Scroll Reveal Logic
     const revealElements = document.querySelectorAll('.reveal');
     const revealOptions = {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.1,
+      rootMargin: "0px 0px -40px 0px"
     };
 
     const revealObserver = new IntersectionObserver(function(entries, observer) {
@@ -47,7 +50,7 @@ const Home = () => {
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       
-      btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`;
     };
 
     const handleMagneticLeave = (e) => {
@@ -72,9 +75,12 @@ const Home = () => {
   return (
     <main>
       <Hero />
+      <About />
       <Story />
-      <Timeline />
-      <Waitlist />
+      <Services />
+      <Products />
+      <MissionVision />
+      <ContactCTA />
     </main>
   );
 };

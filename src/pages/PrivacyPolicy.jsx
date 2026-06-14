@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
 
           <section>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginBottom: 'var(--space-xs)', fontFamily: 'var(--font-heading-alt)' }}>5. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at hello@ThinkDifferent.com.</p>
+            <p>If you have any questions about this Privacy Policy, please contact us at thinkdiffrentsam@gmail.com.</p>
           </section>
         </div>
       </div>
